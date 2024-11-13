@@ -184,7 +184,6 @@ function comer() {
 }
 comer()
 ```
-![alt text](image.png)
 ## CLOSURE o Funciones de cierre (Funciones que retorna funciones)
 Un CLOSURE es una funcion que encapsula una serie de variables y definiciones locales que unicamente seran accesibles si son devueltas con el keyword `return`.
 Antes de que aparezca la version `ecma 6` los `closure` eran un patron creacional que nos permitia modularizar nuestro codigo, en lugar de usar las `clases` que eran populares en otros lenguajes pero que javascript aun no lo implementaba.
