@@ -1,3 +1,4 @@
+
 # Indice
 - [Indice](#indice)
 - [Estructura de datos](#estructura-de-datos)
@@ -223,6 +224,145 @@ En JavaScript, existen muchos métodos para trabajar con listas (o *arrays*) que
 Estos son solo algunos de los métodos más comunes y útiles para trabajar con listas en JavaScript. Existen otros métodos menos utilizados, pero cada uno de estos métodos proporciona una forma eficiente de manipular arrays en diferentes situaciones, desde agregar o eliminar elementos hasta transformar y buscar en las listas.
 
 ## Objetos
-### Creacion
+En JavaScript, los objetos son estructuras que permiten almacenar colecciones de datos y funcionalidades (como funciones dentro de un objeto). Los objetos se componen de pares clave-valor, donde cada clave (o propiedad) está asociada a un valor.
+
+Sintaxis de un Objeto
+La sintaxis básica de un objeto es la siguiente:
+
+```js
+Copiar código
+let persona = {
+  nombre: "Juan",
+  edad: 30,
+  saludar: function() {
+    console.log("Hola, " + this.nombre);
+  }
+};
+```
+## Creacion
+Creación de Objetos
+1. Sintaxis de objeto literal
+Puedes crear un objeto usando la sintaxis de llaves {}:
+
+```javascript
+Copiar código
+let auto = {
+  marca: "Toyota",
+  modelo: "Corolla",
+  año: 2022
+};
+```
+## Uso del constructor Object()
+También puedes crear un objeto usando el constructor Object():
+
+```javascript
+Copiar código
+let persona = new Object();
+persona.nombre = "María";
+persona.edad = 25;
+```
+## Acceso a las propiedades de un objeto
+## Notación de punto: 
+Puedes acceder a las propiedades usando el nombre de la propiedad después de un punto.
+
+```javascript
+Copiar código
+console.log(persona.nombre);  // "María"
+```
+## Notación de corchetes: 
+Puedes acceder a las propiedades usando una cadena de texto como índice.
+
+```javascript
+Copiar código
+console.log(persona["edad"]);  // 25
+```
+## Modificar propiedades
+Puedes cambiar los valores de las propiedades de un objeto:
+
+```javascript
+Copiar código
+persona.edad = 26;  // Cambia la edad
+persona["nombre"] = "Ana";  // Cambia el nombre
+```
 ### Acceder a un elemnto del objeto
+Acceder a un **elemento de un objeto** en JavaScript es bastante sencillo y se puede hacer de dos maneras principales:
+
+1. **Notación de punto (`.`)**: Utilizada cuando se conoce el nombre de la propiedad de antemano.
+2. **Notación de corchetes (`[]`)**: Utilizada cuando la propiedad se almacena en una variable o cuando el nombre de la propiedad contiene caracteres especiales o espacios.
+
+### 1. Notación de Punto (`.`)
+
+La **notación de punto** se utiliza para acceder a las propiedades de un objeto cuando conoces el nombre exacto de la propiedad.
+
+#### Ejemplo:
+
+```javascript
+let persona = {
+  nombre: "Juan",
+  edad: 30,
+  ciudad: "Madrid"
+};
+
+console.log(persona.nombre);  // Accede a la propiedad 'nombre'
+console.log(persona.edad);    // Accede a la propiedad 'edad'
+console.log(persona.ciudad);  // Accede a la propiedad 'ciudad'
+```
+
+### 2. Notación de Corchetes (`[]`)
+
+La **notación de corchetes** se usa cuando el nombre de la propiedad se almacena en una variable, o cuando la propiedad tiene caracteres especiales, espacios o es un nombre reservado.
+
+#### Ejemplo con una propiedad fija:
+
+```javascript
+let persona = {
+  "primer nombre": "Juan",
+  edad: 30
+};
+
+console.log(persona["primer nombre"]);  // "Juan"
+console.log(persona["edad"]);           // 30
+```
+
+#### Ejemplo con una variable:
+
+```javascript
+let persona = {
+  nombre: "Juan",
+  edad: 30
+};
+
+let propiedad = "nombre";
+console.log(persona[propiedad]);  // "Juan"
+```
+
+### Cuándo usar cada tipo de notación:
+
+- **Notación de punto**: Es más simple y directa. Úsala cuando conoces el nombre exacto de la propiedad y el nombre no contiene caracteres especiales ni espacios.
+- **Notación de corchetes**: Se necesita cuando el nombre de la propiedad es una cadena que contiene caracteres especiales, espacios, o cuando el nombre de la propiedad está almacenado en una variable.
+
+### Ejemplo completo:
+
+```javascript
+let persona = {
+  nombre: "Juan",
+  edad: 30,
+  "primer nombre": "Carlos"
+};
+
+// Usando notación de punto
+console.log(persona.nombre);  // "Juan"
+
+// Usando notación de corchetes
+console.log(persona["edad"]);  // 30
+console.log(persona["primer nombre"]);  // "Carlos"
+
+// Usando una variable para acceder
+let propiedad = "nombre";
+console.log(persona[propiedad]);  // "Juan"
+```
+
+### Resumen:
+- **Notación de punto (`.`)**: Ideal cuando conoces el nombre de la propiedad y este no tiene espacios ni caracteres especiales.
+- **Notación de corchetes (`[]`)**: Necesaria cuando el nombre de la propiedad tiene espacios, caracteres especiales o se almacena en una variable.
 ### Metodos
